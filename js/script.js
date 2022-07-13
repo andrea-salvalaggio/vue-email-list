@@ -5,11 +5,12 @@ const app = new Vue (
         data: {
 
             emails: [],
-            
+
         },
 
         created() {
 
+            // Creo un ciclo for per mostrare 10 email nell'array generate randomicamente con API
             for(let i=0; i < 10; i++){
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((response) => {
